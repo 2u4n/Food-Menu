@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem name="Thực Đơn Dinh Dưỡng" id="food_menu_menu" action="" groups="base.group_user" sequence="500"/>
+        <menuitem name="Thực Đơn" id="suggested_food_menu_menu" parent = 'food_menu_menu' action="" groups="base.group_user"/>
+            <menuitem name="Bữa Ăn" id="food_menu" parent="suggested_food_menu_menu" groups="base.group_user" action="food_menu_list_action"/>
+            <menuitem name="Thông Tin Bữa Ăn" id="food_item" parent="suggested_food_menu_menu" groups="base.group_user" action=""/>
+                <menuitem name="Nhóm tuổi" id="age_group" parent="food_item" groups="base.group_user" action="age_group_list_action"/>
+                <menuitem name="Món ăn" id="dish" parent="food_item" groups="base.group_user" action="dish_list_action"/>
+                <menuitem name="Giá trị dinh dưỡng" id="nutritions_fact" parent="food_item" groups="base.group_user" action="nutritions_fact_list_action"/>
+                <menuitem name="Thành phần dinh dưỡng" id="nutritions_value" parent="food_item" groups="base.group_user" action="nutritions_value_list_action"/>
+</odoo>

@@ -1,0 +1,38 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_show_food_menu_header" model="ir.ui.view">
+        <field name="name">Bữa Ăn</field>
+        <field name="model">food_menu</field>
+        <field name="arch" type="xml">  
+            <tree string="Bữa Ăn">
+                <field name="meal"/>
+                <field name="ageGroup"/>
+                <field name="dish"/>
+                <field name="serving"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_food_menu" model="ir.ui.view">
+        <field name="name">Bữa Ăn</field>
+        <field name="model">food_menu</field>
+        <field name="arch" type="xml">  
+            <form string="Bữa Ăn">
+                    <sheet>
+                        <group>
+                            <field name="meal"/>
+                            <field name="ageGroup"/>
+                            <field name="dish"/>
+                            <field name="serving"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="food_menu_list_action">
+            <field name="name">Bữa Ăn</field>
+            <field name="res_model">food_menu</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_food_menu_header"/>
+    </record>
+</odoo> -->

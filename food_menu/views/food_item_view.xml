@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- <record id="action_show_food_item_header" model="ir.ui.view">
+        <field name="name">Thông Tin Bữa Ăn</field>
+        <field name="model">food_item</field>
+        <field name="arch" type="xml">  
+            <tree string="Thông Tin Bữa Ăn">
+                <field name="dishName"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_food_item" model="ir.ui.view">
+        <field name="name">Thông Tin Bữa Ăn</field>
+        <field name="model">food_item</field>
+        <field name="arch" type="xml">  
+            <form string="Thông Tin Bữa Ăn">
+                    <sheet>
+                        <group>
+                            <field name="dishName"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="food_item_list_action">
+            <field name="name">Bữa Ăn</field>
+            <field name="res_model">food_item</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_food_item_header"/>
+    </record> -->
+    <!-- Nhóm tuổi view -->
+    <record id="action_show_age_group_header" model="ir.ui.view">
+        <field name="name">Nhóm tuổi</field>
+        <field name="model">age_group</field>
+        <field name="arch" type="xml">  
+            <tree string="Nhóm tuổi">
+                <field name="ageFrom"/>
+                <field name="ageTo"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_age_group" model="ir.ui.view">
+        <field name="name">Nhóm tuổi</field>
+        <field name="model">age_group</field>
+        <field name="arch" type="xml">   
+            <form string="Nhóm tuổi">
+                    <sheet>
+                        <group>
+                            <field name="ageFrom"/>
+                            <field name="ageTo"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="age_group_list_action">
+            <field name="name">Nhóm tuổi</field>
+            <field name="res_model">age_group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_age_group_header"/>
+    </record>
+    <!-- Món ăn view -->
+    <record id="action_show_dish_header" model="ir.ui.view">
+        <field name="name">Tên món ăn</field>
+        <field name="model">dish</field>
+        <field name="arch" type="xml">  
+            <tree string="Tên món ăn">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="nutritions"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_dish" model="ir.ui.view">
+        <field name="name">Tên món ăn</field>
+        <field name="model">dish</field>
+        <field name="arch" type="xml">   
+            <form string="Nhóm tuổi">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="nutritions"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="dish_list_action">
+            <field name="name">Tên món ăn</field>
+            <field name="res_model">dish</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_dish_header"/>
+    </record>
+    <!-- Giá trị dinh dưỡng view -->
+    <record id="action_show_nutritions_fact_header" model="ir.ui.view">
+        <field name="name">Giá trị dinh dưỡng</field>
+        <field name="model">nutritions_fact</field>
+        <field name="arch" type="xml">  
+            <tree string="Giá trị dinh dưỡng">
+                <field name="name"/>
+                <field name="nutritionsValue"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_nutritions_fact" model="ir.ui.view">
+         <field name="name">Giá trị dinh dưỡng</field>
+        <field name="model">nutritions_fact</field>
+        <field name="arch" type="xml">   
+            <form string="Giá trị dinh dưỡng">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="nutritionsValue"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="nutritions_fact_list_action">
+            <field name="name">Giá trị dinh dưỡng</field>
+            <field name="res_model">nutritions_fact</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_nutritions_fact_header"/>
+    </record>
+    <!-- Thành phần dinh dưỡng view -->
+    <record id="action_show_nutritions_value_header" model="ir.ui.view">
+        <field name="name">Thành phần dinh dưỡng</field>
+        <field name="model">nutritions_value</field>
+        <field name="arch" type="xml">  
+            <tree string="Thành phần dinh dưỡng">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_nutritions_value" model="ir.ui.view">
+         <field name="name">Thành phần dinh dưỡng</field>
+        <field name="model">nutritions_value</field>
+        <field name="arch" type="xml">   
+            <form string="Thành phần dinh dưỡng">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="nutritions_value_list_action">
+            <field name="name">Thành phần dinh dưỡng</field>
+            <field name="res_model">nutritions_value</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_nutritions_value_header"/>
+    </record>
+    <!-- full menu view -->
+    <record id="action_show_food_menu_header" model="ir.ui.view">
+        <field name="name">Bữa Ăn</field>
+        <field name="model">food_menu</field>
+        <field name="arch" type="xml">  
+            <tree string="Bữa Ăn">
+                <field name="meal"/>
+                <field name="ageGroup"/>
+                <field name="dish"/>
+                <field name="serving"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_show_food_menu" model="ir.ui.view">
+        <field name="name">Bữa Ăn</field>
+        <field name="model">food_menu</field>
+        <field name="arch" type="xml">  
+            <form string="Bữa Ăn">
+                    <sheet>
+                        <group>
+                            <field name="meal"/>
+                            <field name="ageGroup"/>
+                            <field name="dish"/>
+                            <field name="serving"/>
+                        </group>
+                    </sheet>
+                </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="food_menu_list_action">
+            <field name="name">Bữa Ăn</field>
+            <field name="res_model">food_menu</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="action_show_food_menu_header"/>
+    </record>
+</odoo>
